@@ -5,7 +5,6 @@ export function useMaterials() {
     { 
       title: 'Presentations', 
       items: [
-        // REMOVED /public from all paths
         { name: 'PDF Presentation', file: '/assets/Bellefort_Estates_Presentation.pdf', type: 'PDF' },
         { name: 'Video Presentation', file: '/assets/BFE RFO(ANA).mp4', type: 'Video' }
       ]
@@ -13,7 +12,7 @@ export function useMaterials() {
     { 
       title: 'Sales Tools', 
       items: [
-        { name: 'Latest Price List 1', file: '/assets/PL 1.png', type: 'Image' }, // Changed type to Image if it's a .png
+        { name: 'Latest Price List 1', file: '/assets/PL 1.png', type: 'Image' },
         { name: 'Latest Price List 2', file: '/assets/PL 2.png', type: 'Image' },
         { name: 'Latest Price List 3', file: '/assets/PL 3.png', type: 'Image' },
         { name: 'Latest Price List 4', file: '/assets/PL 4.png', type: 'Image' },
