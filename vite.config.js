@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue' // Ensure it says @vitejs/plugin-vue
+import vue from '@vitejs/plugin-vue'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  // Ensure this matches your GitHub repository name exactly
   base: '/Bellefort-Materials/', 
 })

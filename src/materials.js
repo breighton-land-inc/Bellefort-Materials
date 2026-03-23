@@ -5,32 +5,33 @@ export function useMaterials() {
     { 
       title: 'Presentations', 
       items: [
-        { name: 'PDF Presentation', file: '/public/assets/Bellefort_Estates _Presentation.pdf', type: 'PDF' },
+        // REMOVED /public from all paths
+        { name: 'PDF Presentation', file: '/assets/Bellefort_Estates_Presentation.pdf', type: 'PDF' },
         { name: 'Video Presentation', file: '/assets/BFE RFO(ANA).mp4', type: 'Video' }
       ]
     },
     { 
       title: 'Sales Tools', 
       items: [
-        { name: 'Latest Price List', file: '/public/assets/PL 1.png', type: 'PDF' },
-        { name: 'Latest Price List', file: '/public/assets/PL 2.png', type: 'PDF' },
-        { name: 'Latest Price List', file: '/public/assets/PL 3.png', type: 'PDF' },
-        { name: 'Latest Price List', file: '/public/assets/PL 4.png', type: 'PDF' },
+        { name: 'Latest Price List 1', file: '/assets/PL 1.png', type: 'Image' }, // Changed type to Image if it's a .png
+        { name: 'Latest Price List 2', file: '/assets/PL 2.png', type: 'Image' },
+        { name: 'Latest Price List 3', file: '/assets/PL 3.png', type: 'Image' },
+        { name: 'Latest Price List 4', file: '/assets/PL 4.png', type: 'Image' },
       ]
     },
     { 
       title: 'Technical Docs', 
       items: [
-        { name: 'Charlotte Plans', file: '/public/assets/BFE floor plan/Charlotte floor plan.png', type: 'Image' },
-        { name: 'Sabine' , file: '/public/assets/BFE floor plan/Sabine floor plan.png', type: 'Image' },
-        { name: 'Vivienne', file: '/public/assets/BFE floor plan/Vivienne floor plan.png', type: 'Image' },
+        { name: 'Charlotte Plans', file: '/assets/BFE floor plan/Charlotte floor plan.png', type: 'Image' },
+        { name: 'Sabine' , file: '/assets/BFE floor plan/Sabine floor plan.png', type: 'Image' },
+        { name: 'Vivienne', file: '/assets/BFE floor plan/Vivienne floor plan.png', type: 'Image' },
       ]
     },
     {
         title: 'Site Maps',
         items: [
-            { name: 'Official Site Map - Phase 1', file: '/public/assets/BFE Map/Phase1 BFE.pdf', type: 'PDF' },
-            { name: 'Official Site Map - Phase 2', file: '/public/assets/BFE Map/Phase 2 BFE.pdf', type: 'PDF' },
+            { name: 'Official Site Map - Phase 1', file: '/assets/BFE Map/Phase1 BFE.pdf', type: 'PDF' },
+            { name: 'Official Site Map - Phase 2', file: '/assets/BFE Map/Phase 2 BFE.pdf', type: 'PDF' },
         ]
     }
   ])
