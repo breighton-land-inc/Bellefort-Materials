@@ -8,7 +8,8 @@ const {
   selectedFile, 
   openPreview, 
   closePreview, 
-  downloadFile 
+  downloadFile,
+  baseUrl
 } = useMaterials()
 
 const isMenuOpen = ref(false)
@@ -31,7 +32,7 @@ const scrollToCategory = (id) => {
     <nav class="navbar">
       <div class="nav-container">
         <div class="nav-brand">
-          <img src="/assets/Bellefort_Logo (1).png" alt="Bellefort Estates" class="nav-logo" />
+          <img :src="`${baseUrl}/Bellefort_Logo (1).png`" alt="Bellefort Estates" class="nav-logo" />
         </div>
 
         <button class="menu-toggle" @click="toggleMenu" aria-label="Toggle menu">
@@ -52,8 +53,8 @@ const scrollToCategory = (id) => {
     <header id="home" class="hero">
       <div class="video-banner-container">
         <video autoplay muted loop playsinline class="hero-video">
-          <source src="/assets/Bellefort Estate Logo Animated.mp4" type="video/mp4">
-          <source src="/assets/Bellefort Estate Logo Animated.mp4" type="video/quicktime">
+          <source :src="`${baseUrl}/Bellefort Estate Logo Animated.mp4`" type="video/mp4">
+          <source :src="`${baseUrl}/Bellefort Estate Logo Animated.mp4`" type="video/quicktime">
           Your browser does not support the video tag.
         </video>
         

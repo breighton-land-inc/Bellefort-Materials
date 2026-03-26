@@ -74,5 +74,5 @@ export function useMaterials() {
     document.body.removeChild(link)
   }
 
-  return { categories, isModalOpen, selectedFile, openPreview, closePreview, downloadFile }
+  return { categories, isModalOpen, selectedFile, openPreview, closePreview, downloadFile, baseUrl }
 }
