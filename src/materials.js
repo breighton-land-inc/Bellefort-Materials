@@ -37,6 +37,7 @@ export function useMaterials() {
       title: 'Technical Docs',
       items: [
         { name: 'House Warranty Coverage', file: `${baseUrl}/House Warranty Coverage.jpg`, type: 'Image' },
+        { name: 'Sample Computation', file: `${baseUrl}/Sample Computation/BFE sample_computation.pdf`, type: 'PDF' },
       ]
     },
 
