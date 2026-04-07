@@ -15,12 +15,9 @@ export function useMaterials() {
       ]
     },
     { 
-      title: 'Sales Tools', 
+      title: 'Inventory', 
       items: [
-        { name: 'Latest Price List 1', file: `${baseUrl}/PL 1.png`, type: 'Image' },
-        { name: 'Latest Price List 2', file: `${baseUrl}/PL 2.png`, type: 'Image' },
-        { name: 'Latest Price List 3', file: `${baseUrl}/PL 3.png`, type: 'Image' },
-        { name: 'Latest Price List 4', file: `${baseUrl}/PL 4.png`, type: 'Image' },
+        { name: 'Price list As of April 2026', file: `${baseUrl}/INVENTORY (BFE) PRICELIST AS OF April 3.pdf`, type: 'PDF' },
       ]
     },
     { 
@@ -42,7 +39,7 @@ export function useMaterials() {
     },
 
     {
-        title: 'Site Maps',
+        title: 'Site Development Map',
         items: [
             { name: 'Official Site Map - Phase 1', file: `${baseUrl}/BFE Map/Phase1 BFE.pdf`, type: 'PDF' },
             { name: 'Official Site Map - Phase 2', file: `${baseUrl}/BFE Map/Phase 2 BFE.pdf`, type: 'PDF' },
