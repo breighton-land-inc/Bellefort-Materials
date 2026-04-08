@@ -25,6 +25,10 @@ const scrollToCategory = (id) => {
     isMenuOpen.value = false;
   }
 }
+
+const isAndroid = () => {
+  return /Android/i.test(navigator.userAgent);
+}
 </script>
 
 <template>
@@ -111,6 +115,13 @@ const scrollToCategory = (id) => {
               <video v-if="selectedFile?.type === 'Video'" controls autoplay class="preview-obj video-fix">
                 <source :src="selectedFile.file" type="video/mp4">
               </video>
+
+              <iframe 
+                v-else-if="selectedFile?.type === 'PDF' && isAndroid() && selectedFile.file.startsWith('http')" 
+                :src="`https://docs.google.com/gview?url=${encodeURIComponent(selectedFile.file)}&embedded=true`" 
+                class="preview-obj"
+                frameborder="0"
+              ></iframe>
 
               <embed 
                 v-else-if="selectedFile?.type === 'PDF'" 
