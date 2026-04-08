@@ -26,8 +26,16 @@ const scrollToCategory = (id) => {
   }
 }
 
-const isAndroid = () => {
-  return /Android/i.test(navigator.userAgent);
+const isMobileDevice = () => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+const getPdfAbsoluteUrl = (url) => {
+  if (url.startsWith('http')) return url;
+  const origin = window.location.origin;
+  const pathname = window.location.pathname.replace(/(\/)*$/, '');
+  const cleanUrl = url.replace(/^\//, '');
+  return `${origin}${pathname}/${cleanUrl}`;
 }
 </script>
 
@@ -116,12 +124,17 @@ const isAndroid = () => {
                 <source :src="selectedFile.file" type="video/mp4">
               </video>
 
-              <iframe 
-                v-else-if="selectedFile?.type === 'PDF' && isAndroid() && selectedFile.file.startsWith('http')" 
-                :src="`https://docs.google.com/gview?url=${encodeURIComponent(selectedFile.file)}&embedded=true`" 
-                class="preview-obj"
-                frameborder="0"
-              ></iframe>
+              <div 
+                v-else-if="selectedFile?.type === 'PDF' && isMobileDevice()" 
+                class="preview-obj" 
+                style="overflow: auto; -webkit-overflow-scrolling: touch;"
+              >
+                <iframe 
+                  :src="`https://docs.google.com/gview?url=${encodeURIComponent(getPdfAbsoluteUrl(selectedFile.file))}&embedded=true`" 
+                  style="width: 100%; height: 100%; border: none;"
+                  frameborder="0"
+                ></iframe>
+              </div>
 
               <embed 
                 v-else-if="selectedFile?.type === 'PDF'" 
