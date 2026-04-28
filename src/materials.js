@@ -17,7 +17,7 @@ export function useMaterials() {
     { 
       title: 'Inventory', 
       items: [
-        { name: 'Price list As of April 2026', file: `${baseUrl}/INVENTORY (BFE) PRICELIST AS OF April 3.pdf`, type: 'PDF' },
+        { name: 'Price list As of April 4, 2026', file: `${baseUrl}/Sample Computation/Bellefort_PL.pdf`, type: 'PDF' },
       ]
     },
     { 
